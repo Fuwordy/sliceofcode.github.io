@@ -25,6 +25,24 @@
 			
 			// apply the tableflip
 			document.getElementById("flip").innerHTML = flipped;
+
+			console.log("Using " + flipped + " as flip (" + flips.length + " possible flips)");
+
+			var tables = ["┻━┻", "&lt;/table&gt;"]; // possible tables
+
+			// choose a table
+			var table = tables[Math.floor(Math.random() * tables.length)];
+
+			var tableelement = document.getElementById("table");
+
+			if (table == "&lt;/table&gt;") {
+				console.log("Table was table element, giving it an upsidedown effect.");
+				tableelement.className = "upsidedown";
+			}
+
+			tableelement.innerHTML = table;
+
+			console.log("Using " + table + " as table (" + tables.length + " possible tables)");
 		};
 	</script>
 
@@ -52,7 +70,7 @@
 			cursor: default; /* Prevent I-Beam from showing. */
 		}
 
-		#table {
+		.upsidedown {
 			display: inline-block; /* Needed. */
 			-webkit-transform: rotateZ(180deg); /* Flip upside down. */
 			transform: rotateZ(180deg); /* Ditto. */
@@ -65,7 +83,7 @@
 			(╯°□°）╯︵ 
 		</span>
 		<span id="table">
-			&lt;/table&gt;
+			┻━┻
 		</span>
 	</div>
 </body>
