@@ -14,6 +14,20 @@
 	-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"/>
 
+	<script>
+		window.onload = function() {
+			var flips = ["(ﾉಥ益ಥ）ﾉ", "(ノ ゜Д゜)ノ ︵", "(╯°Д°）╯︵",
+				"(╯'□')╯︵", "(╯°□°）╯︵", "ʕノ•ᴥ•ʔノ ︵",
+				"(/¯◡ ‿ ◡)/¯ ~", "(ﾉ`Д´)ﾉ︵"]; // possible tableflips
+
+			// choose a tableflip
+			var flipped = flips[Math.floor(Math.random() * flips.length)];
+			
+			// apply the tableflip
+			document.getElementById("flip").innerHTML = flipped;
+		};
+	</script>
+
 	<style>
 		#flipout {
 			position: fixed;
