@@ -1,35 +1,58 @@
 <!DOCTYPE html>
+<!-- (╯°□°）╯︵ </table> -->
+<!-- (flips out) -->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<head>
+	<title>&lt;table&gt;</title>
+	<meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<!-- animate.css 3.2.0 by daneden. Under MIT License.
 
-    <title>sliceofcode by sliceofcode</title>
-  </head>
+		MIT License: http://opensource.org/licenses/MIT
+		animate.css: https://github.com/daneden/animate.css
 
-  <body>
+	-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"/>
 
-    <header>
-      <div class="container">
-        <h1>sliceofcode</h1>
-        <h2>lifeless programmer</h2>
+	<style>
+		#flipout {
+			position: fixed;
+			font-size: 5em;
+			font-family: monospace;
 
-        <section id="downloads">
-          <a href="https://github.com/sliceofcode" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+			height: 100px; /* Fixed height. */
+			width: 1000px; /* Fixed width. */
 
-    <div class="container">
-      <section id="main_content">
-        <p>uwu</p>
-      </section>
-    </div>
+			left: 50%; /* Push 50% to right. */
+			margin-left: -500px; /* Pull back by half of width. */
 
-    
-  </body>
+			top: 50%; /* Push 50% bottom. */
+			margin-top: -50px; /* Pull back by half of height. */
+
+			text-align: center; /* Align center in block. */
+
+			-webkit-user-select: none;
+		}
+
+		#flipout:active, #flipout:hover {
+			cursor: default; /* Prevent I-Beam from showing. */
+		}
+
+		#table {
+			display: inline-block; /* Needed. */
+			-webkit-transform: rotateZ(180deg); /* Flip upside down. */
+			transform: rotateZ(180deg); /* Ditto. */
+		}
+	</style>
+</head>
+<body>
+	<div id="flipout" class="animated zoomIn">
+		<span id="flip">
+			(╯°□°）╯︵ 
+		</span>
+		<span id="table">
+			&lt;/table&gt;
+		</span>
+	</div>
+</body>
 </html>
