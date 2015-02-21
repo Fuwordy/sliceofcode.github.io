@@ -1,0 +1,38 @@
+#slice {
+	font-family: Menlo, Monaco, "InputMono", "Input Mono", "Ubuntu Mono", Consolas, monospace;
+	font-size: 3em;
+	text-align: center;
+	position: absolute;
+	width: 99%;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+#slice > span {
+	
+}
+
+.curly-underline {
+	background: url(http://www.phpied.com/images/underline.gif) bottom repeat-x;
+}
+
+div#slice::after {
+	content: "|";
+	animation: blink 1s steps(2, start) infinite;
+	-webkit-animation: blink 1s steps(2, start) infinite; 
+}
+
+@keyframes blink {
+	to {
+			visibility: hidden; 
+		}
+}
+
+@-webkit-keyframes blink {
+	to {
+		visibility: hidden; 
+	} 
+}
