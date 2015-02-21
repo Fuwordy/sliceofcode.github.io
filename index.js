@@ -1,5 +1,15 @@
 $(document.body).ready(function() {
-	var name = "sliceofcode.";
+	var names = [
+		"sliceofcode.",
+		"make",
+		"sudo make install",
+		"./configure --prefix=/opt/",
+		"make test",
+		"dmesg | less",
+	];
+
+	var name = names[Math.floor(Math.random() * names.length)];
+
 	var q = $.map(name.split(""), function(letter) {
 		return $("<span>" + letter + "</span>");
 	});
