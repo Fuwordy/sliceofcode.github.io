@@ -3,7 +3,7 @@ $(document.body).ready(function() {
 		"sliceofcode.",
 		"make",
 		"sudo make install",
-		"./configure --prefix=/opt/",
+		"./configure",
 		"make test",
 		"dmesg | less",
 	];
