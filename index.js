@@ -4,7 +4,7 @@ $(document.body).ready(function() {
 		"make",
 		"sudo make install",
 		"./configure",
-		"make test",
+		"Love me you sexy beast",
 		"dmesg | less",
 	];
 
